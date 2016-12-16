@@ -1,0 +1,33 @@
+
+<div class="homepage">
+    <table st-table="rowCollection" class="table table-striped">
+        <thead>
+        <tr>
+            <th> Container name </th>
+            <th> CPU Usage </th>
+            <th> Status </th>
+            <th> Size </th>
+            <th> Operation </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="row in rowCollection">
+            <td>{{row.cname }}</td>
+            <td>{{row.cpu_usage}}</td>
+            <td>{{row.status }}</td>
+            <td>{{row.size }}</td>
+
+            <td>
+                <button type="button" ng-click="clickHandler(row.cid)" ng-class="{'btn-danger': row.status == 'running', 'btn-warning': row.status == 'crashed'}" class="btn btn-opr btn-success">
+                    <!--<i class="glyphicon glyphicon-remove-circle">
+                    </i> --> {{row.operation.toUpperCase()}}
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+

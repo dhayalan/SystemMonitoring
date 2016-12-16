@@ -1,0 +1,86 @@
+// Variables
+
+$heading-font-family: 'Roboto', sans-serif;
+$content-font-family: Arial, sans-serif;
+
+$color-body-background: #f5f5f5;
+$color-footer-background: #fff;
+$color-white: #ffffff;
+
+$btn-text-color: #337ab7;
+$background-color: #f6f6f6;
+$font-bold: bold;
+
+$color-blue: #199de0;
+$color-blue-mid: #0076CB;
+$color-blue-dark: #00679e; /*for Links*/
+$color-blue-hover: #065D9C;
+$dark-blue: #0066bb;
+$color-blue-light: #56c0e0;
+$color-blue-very-light: #f7f8fa;
+
+$color-green-light: #58b957;
+$color-green: #038719;
+
+$color-light-yellow: #ffdb55;
+$color-yellow: #f2ae43;
+
+$color-red: #cc0000;
+
+$color-gray-dark: #363636; //heading font size
+$color-gray-med-dark: #636363; //icon
+$color-gray: #767676; //body font size
+$color-gray-med: #969696;
+$color-gray-med-light: #d7d7d7; //border
+$color-gray-light: #ECECEC;
+$color-gray-very-light: #f2f2f2; //background
+$color-grey: #030303;
+
+
+$container-large-desktop: 1200px;
+
+$navbar-height: 54px;
+$navbar-padding-vertical: 20px;
+$navbar-padding-horizontal: 0;
+
+$modal-xs-max-width: 420px;
+$modal-sm-max-width: 620px;
+$modal-md-max-width: 820px;
+$modal-lg-max-width: 1180px;
+
+$size-0px: 0px;
+$border-solid : 1px solid;
+$size-5px :5px;
+$size-10px :10px;
+$size-11px :11px;
+$font-size-14px :14px;
+$size-15px :15px;
+$size-20px :20px;
+$size-25px :25px;
+$size-30px :30px;
+$size-35px :35px;
+$size-40px :40px;
+$size-17px :17px;
+$size-18px :18px;
+$size-64px :64px;
+$width-100prcnt :100%;
+
+
+$body-small : 12px;
+$body-med : 14px;
+$body-large : 16px;
+
+$header: 18px;
+$header-large: 22px;
+$header-xlarge: 30px;
+
+
+//button component variables
+$btn-large-lr-padding:36px;
+$btn-medium-lr-padding:30px;
+$btn-small-lr-padding:15px;
+$btn-large-height:42px;
+$btn-medium-height:36px;
+$btn-large-font-size:16px;
+$btn-medium-font-size:14px;
+$btn-secondary-border: 1px solid $color-blue-mid;
