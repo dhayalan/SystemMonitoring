@@ -1,0 +1,11 @@
+<div class="row">
+    <ul class="nav nav-tabs navigation" role="tablist">
+        <!--<li class="outer" ng-class="{active:isActiveTab('grid')}"-->
+            <!--ng-click="onClickTab('grid')"> {{tab.title}}-->
+        <li ng-repeat="tab in tabs" ng-class="{active: tab.active == true}">
+            <a role="tab" data-toggle="tab" ng-click="onClickTab(tab)">
+                <span> {{tab.title}} </span>
+            </a>
+        </li>
+    </ul>
+</div>

@@ -25,6 +25,7 @@
     <!-- scripts -->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular-smart-table/dist/smart-table.js"></script>
     <script src="bower_components/lodash/lodash.js"></script>
@@ -34,12 +35,18 @@
     <script src="https://code.highcharts.com/highcharts.js"></script>
 
     <script src="app.js"></script>
-    <script src="scripts/directives/verticalNavDirective.js"></script>
+
     <script src="scripts/services/RestfulService.js"></script>
+    <!--<script src="scripts/controllers/HeaderController.js"></script>-->
     <script src="scripts/controllers/HomepageController.js"></script>
     <script src="scripts/controllers/GraphController.js"></script>
 
-    <div class="body-inner" ng-include="'html/components/indexComponent.html'"></div>
+    <script src="scripts/directives/headerNavDirective.js"></script>
+    <script src="scripts/directives/gridDataDirective.js"></script>
+    <script src="scripts/directives/graphDataDirective.js"></script>
+
+    <!--<div class="body-inner" ng-include="'html/components/indexComponent.html'"></div>-->
+    <div class="main-content" ng-view autoscroll="false"></div>
 
 
 </body>

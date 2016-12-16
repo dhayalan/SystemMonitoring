@@ -1,13 +1,17 @@
 'use strict';
 
 angular.module('systemMonitor')
-    .controller('homepageController', ['$scope', 'gridData', 'restfulService', function ($scope, gridData, restfulService) {
+    .controller('homepageController', ['$scope', 'restfulService', function ($scope, restfulService) {
 
-        // console.log(gridData);
-        $scope.rowCollection = gridData;
-        $scope.getHomePageData = function () {
-            $scope.rowCollection = gridData;
-        }
+
+        restfulService.getGridData().then(function (response) {
+            // console.log(response);
+            $scope.rowCollection = response.gridData;
+        });
+        // $scope.rowCollection = $scope.gridData;
+        // $scope.getHomePageData = function () {
+        //     $scope.rowCollection = $scope.gridData;
+        // }
 
 
 

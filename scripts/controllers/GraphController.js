@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('systemMonitor')
-    .controller('graphController', ['$scope', 'graphData', 'restfulService', function ($scope, graphData, restfulService) {
+    .controller('graphController', ['$scope', 'restfulService', function ($scope, restfulService) {
         /*Highcharts.chart('container', {
             chart: {
                 type: 'area'
@@ -27,7 +27,11 @@ angular.module('systemMonitor')
             }]
         });
         */
-        $scope.graphData = graphData;
+        // $scope.graphData = graphData;
+        $scope.graphData = [];
+        // restfulService.getGraphData().then(function (response) {
+        //     // $scope.graphData = response.graphData;
+        // });
 
         $scope.getGraphData = function () {
             var series = [];

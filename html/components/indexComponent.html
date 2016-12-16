@@ -1,14 +1,14 @@
 <div id="wrapper" class="wrapper">
 
-    <!--left vertical navigation bar directive-->
-    <vertical-nav></vertical-nav>
+    <header-nav ng-model="currentTab"> </header-nav>
 
+    <div ng-show="currentTab == 'grid'">
+        <grid-data> </grid-data>
+    </div>
 
-    <!--change content by changing views-->
-    <div class="main-content" ng-view autoscroll="false"></div>
-
-    <!--gb footer-->
-    <!--<div ng-if="$root.currentState !='parent.inspector'" ng-include="'html/components/gbFooter.html'"></div>-->
+    <div ng-show="currentTab == 'graph'"> Graph goes here
+        <graph-data> </graph-data>
+    </div>
 
 
 </div>
