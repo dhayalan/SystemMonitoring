@@ -3,12 +3,12 @@
 angular.module('systemMonitor')
     .controller('homepageController', ['$scope', 'restfulService', function ($scope, restfulService) {
 
+        $scope.rowCollection = restfulService.getGridData().then(function (resp) {
+            console.log(resp.data);
+            $scope.rowCollection = resp.data;
+            $scope.displayCollection = [].concat($scope.rowCollection);
 
-        restfulService.getGridData().then(function (response) {
-            // console.log(response);
-            $scope.rowCollection = response.gridData;
         });
-        // $scope.rowCollection = $scope.gridData;
         // $scope.getHomePageData = function () {
         //     $scope.rowCollection = $scope.gridData;
         // }
@@ -18,7 +18,10 @@ angular.module('systemMonitor')
         $scope.clickHandler = function clickHandler(cid) {
             console.log(cid);
             //click action
-            restfulService.processOperation(cid);
+            restfulService.processOperation(cid).then(function (response) {
+                console.log(response);
+                $scope.rowCollection = response.gridData;
+            });
         }
 
 
