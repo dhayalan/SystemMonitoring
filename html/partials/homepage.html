@@ -4,7 +4,7 @@
         <thead>
         <tr>
             <th st-sort="CName" st-skip-natural="true"> Container name </th>
-            <th> CPU Usage </th>
+            <th> Container ID</th>
             <th st-sort="CStatus"> Status </th>
             <th st-sort="CSize"> Size </th>
             <th> Operation </th>
@@ -13,12 +13,12 @@
         <tbody>
         <tr ng-repeat="row in displayCollection">
             <td>{{row.CName }}</td>
-            <td>{{row.cpu_usage}}</td>
+            <td>{{row.id | cut:true:10:' ...'}}</td>
             <td>{{row.CStatus }}</td>
             <td>{{row.CSize }}</td>
 
             <td>
-                <button type="button" ng-click="clickHandler(row.id)" ng-class="{'btn-danger': row.CState == 'running', 'btn-warning': row.CState == 'crashed'}" class="btn btn-opr btn-success">
+                <button type="button" ng-click="clickHandler($index)" ng-class="{'btn-danger': row.CState == 'running', 'btn-warning': row.CState == 'crashed'}" class="btn btn-opr btn-success">
                     <!--<i class="glyphicon glyphicon-remove-circle"> ng-click="clickHandler(row.CId)"
                     </i> --> STOP
                 </button>

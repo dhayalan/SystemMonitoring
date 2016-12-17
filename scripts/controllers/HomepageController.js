@@ -4,7 +4,7 @@ angular.module('systemMonitor')
     .controller('homepageController', ['$scope', 'restfulService', function ($scope, restfulService) {
 
         $scope.rowCollection = restfulService.getGridData().then(function (resp) {
-            console.log(resp.data);
+            // console.log(resp.data);
             $scope.rowCollection = resp.data;
             $scope.displayCollection = [].concat($scope.rowCollection);
 
@@ -16,11 +16,12 @@ angular.module('systemMonitor')
 
 
         $scope.clickHandler = function clickHandler(id) {
-            console.log(id);
+            // console.log(id);
             //click action
-            restfulService.processOperation(id).then(function (response) {
-                console.log(response);
-                $scope.rowCollection = response.data;
+            restfulService.processOperation(id + 1).then(function (response) {
+                // console.log(response);
+                $scope.rowCollection = response.gridData;
+                $scope.displayCollection = [].concat($scope.rowCollection);
             });
         }
 
