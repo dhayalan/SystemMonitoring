@@ -33,7 +33,11 @@ angular.module("systemMonitor")
             return objData;
         };
 
-            obj.processOperation = function(cid) {
+        obj.getGraphData = function () {
+            return Restangular.one('SystemMonitoring/json/graphData.json').get();
+        };
+
+        obj.processOperation = function (cid) {
 
                 // return Restangular.all('SystemMonitoring/json/processData.json').post(cid);
             };

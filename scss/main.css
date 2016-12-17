@@ -20,4 +20,8 @@ body {
 .btn-opr {
   width: 90px; }
 
+#graph-container {
+  height: calc(100vh - 100px);
+  width: calc(100vw - 100px); }
+
 /*# sourceMappingURL=main.css.map */
