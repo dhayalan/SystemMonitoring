@@ -24,7 +24,6 @@ angular.module("systemMonitor")
         };
 
         obj.processOperation = function (cid) {
-
             return Restangular.all('processoperation').post(cid);
         };
 

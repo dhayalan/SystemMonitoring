@@ -11,7 +11,7 @@ angular.module('systemMonitor')
                     series.push({
                         name: $scope.graphData[counter].cname,
                         data: $scope.graphData[counter].graph_data,
-                        color: Highcharts.getOptions().colors[counter + 2]
+                        color: Highcharts.getOptions().colors[counter + 3]
                     })
                 }
             }
