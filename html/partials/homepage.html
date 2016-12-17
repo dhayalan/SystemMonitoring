@@ -1,26 +1,26 @@
 
 <div class="homepage">
-    <table st-table="rowCollection" class="table table-striped">
+    <table st-safe-src="rowCollection" st-table="displayCollection" class="table table-striped">
         <thead>
         <tr>
-            <th> Container name </th>
+            <th st-sort="CName" st-skip-natural="true"> Container name </th>
             <th> CPU Usage </th>
-            <th> Status </th>
-            <th> Size </th>
+            <th st-sort="CStatus"> Status </th>
+            <th st-sort="CSize"> Size </th>
             <th> Operation </th>
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="row in rowCollection">
-            <td>{{row.cname }}</td>
+        <tr ng-repeat="row in displayCollection">
+            <td>{{row.CName }}</td>
             <td>{{row.cpu_usage}}</td>
-            <td>{{row.status }}</td>
-            <td>{{row.size }}</td>
+            <td>{{row.CStatus }}</td>
+            <td>{{row.CSize }}</td>
 
             <td>
-                <button type="button" ng-click="clickHandler(row.cid)" ng-class="{'btn-danger': row.status == 'running', 'btn-warning': row.status == 'crashed'}" class="btn btn-opr btn-success">
-                    <!--<i class="glyphicon glyphicon-remove-circle">
-                    </i> --> {{row.operation.toUpperCase()}}
+                <button type="button" ng-click="clickHandler(row.id)" ng-class="{'btn-danger': row.CState == 'running', 'btn-warning': row.CState == 'crashed'}" class="btn btn-opr btn-success">
+                    <!--<i class="glyphicon glyphicon-remove-circle"> ng-click="clickHandler(row.CId)"
+                    </i> --> STOP
                 </button>
             </td>
         </tr>
