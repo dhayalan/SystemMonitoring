@@ -39,6 +39,24 @@ angular.module("systemMonitor")
 
             return objData;
         };
+        obj.getBarChartData = function () {
+            var objData = $http({
+                    method: 'GET',
+                    url: 'http://10.20.4.182:8000/containers'
+                })
+                .success(function (data) {
+                    console.log(data);
+                    return data;
+                })
+                .error(function (data) {
+                    console.log(data);
+                })
+                .catch(function (data) {
+                    console.log(data);
+                });
+
+            return objData;
+        };
         obj.getGraphData = function () {
             return Restangular.one('SystemMonitoring/json/graphData.json').get();
         };

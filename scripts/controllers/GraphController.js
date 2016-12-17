@@ -30,8 +30,8 @@ angular.module('systemMonitor')
                     labels: {
                         formatter: function () {
                             var date = new Date(this.value);
-                            /*date = date.toString().split(' ');
-return date[1] + "'" + date[3].substring(2, 4);*/
+                            date = date.toString().split(' ');
+                            return date[1] + "'" + date[3].substring(2, 4);
 
                             return date.getHours() + ":" + date.getMinutes();
                         }

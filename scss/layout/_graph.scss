@@ -1,4 +1,7 @@
-#graph-container {
+#graph-container,
+#bar-chart-container {
     height: calc(100vh - 100px);
     width: calc(100vw - 100px);
+    min-width: 300px;
+    margin: 0 auto;
 }
