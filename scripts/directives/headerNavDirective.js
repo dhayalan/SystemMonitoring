@@ -5,13 +5,18 @@ angular.module("systemMonitor")
             restrict: 'EA',
             replace: false,
             templateUrl: 'html/templates/headerNav.html',
-            link:function($scope, element, attrs, ngModel){
+            link: function ($scope, element, attrs, ngModel) {
 
                 $scope.tabs = [{
                     title: 'Grid',
                     active: true,
                     state: 'grid',
                     url: 'html/partials/homepage.html'
+                }, {
+                    title: 'Bar Chart',
+                    active: false,
+                    state: 'barChart',
+                    url: 'html/partials/barChart.html'
                 }, {
                     title: 'Graph',
                     active: false,
@@ -25,7 +30,7 @@ angular.module("systemMonitor")
                     $scope.currentTab = tab.state;
                 }
 
-                $scope.isActiveTab = function(tab) {
+                $scope.isActiveTab = function (tab) {
                     return $scope.currentTab == tab;
                 }
 
