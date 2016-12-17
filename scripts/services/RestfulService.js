@@ -32,14 +32,25 @@ angular.module("systemMonitor")
 
             return objData;
         };
-
         obj.getGraphData = function () {
             return Restangular.one('SystemMonitoring/json/graphData.json').get();
         };
 
-        obj.processOperation = function (cid) {
+
+        obj.processOperation = function (id) {
 
                 // return Restangular.all('SystemMonitoring/json/processData.json').post(cid);
+            var objData =  $http({method: 'POST',
+                url: 'http://10.20.4.182:8000/containerkill',
+                params: {
+                    id: id
+                }
+            })
+                .success(function(data){  console.log(data); return data; })
+                .error(function(data){ console.log(data); })
+                .catch(function(data){ console.log(data);});
+
+            return objData;
             };
 
         return obj;

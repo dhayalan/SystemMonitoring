@@ -15,12 +15,12 @@ angular.module('systemMonitor')
 
 
 
-        $scope.clickHandler = function clickHandler(cid) {
-            console.log(cid);
+        $scope.clickHandler = function clickHandler(id) {
+            console.log(id);
             //click action
-            restfulService.processOperation(cid).then(function (response) {
+            restfulService.processOperation(id).then(function (response) {
                 console.log(response);
-                $scope.rowCollection = response.gridData;
+                $scope.rowCollection = response.data;
             });
         }
 

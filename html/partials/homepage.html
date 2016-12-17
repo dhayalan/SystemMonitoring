@@ -18,7 +18,7 @@
             <td>{{row.CSize }}</td>
 
             <td>
-                <button type="button" ng-class="{'btn-danger': row.CState == 'running', 'btn-warning': row.CState == 'crashed'}" class="btn btn-opr btn-success">
+                <button type="button" ng-click="clickHandler(row.id)" ng-class="{'btn-danger': row.CState == 'running', 'btn-warning': row.CState == 'crashed'}" class="btn btn-opr btn-success">
                     <!--<i class="glyphicon glyphicon-remove-circle"> ng-click="clickHandler(row.CId)"
                     </i> --> STOP
                 </button>
