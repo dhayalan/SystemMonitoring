@@ -1,11 +1,10 @@
 'use strict';
 angular.module("systemMonitor")
-    .service('restfulService',
-        ['Restangular', function (Restangular) {
+    .service('restfulService', ['Restangular', function (Restangular) {
 
         var obj = {};
 
-        obj.getGridData = function() {
+        obj.getGridData = function () {
 
             return Restangular.one('SystemMonitoring/json/gridData.json').get();
             // var data = [
@@ -20,10 +19,14 @@ angular.module("systemMonitor")
             // return data;
         };
 
-            obj.processOperation = function(cid) {
+        obj.getGraphData = function () {
+            return Restangular.one('SystemMonitoring/json/graphData.json').get();
+        };
 
-                return Restangular.all('processoperation').post(cid);
-            };
+        obj.processOperation = function (cid) {
+
+            return Restangular.all('processoperation').post(cid);
+        };
 
         return obj;
     }]);
