@@ -14,17 +14,17 @@ angular.module('systemMonitor')
 
                 upTime = upTime.split(" ");
 
-                switch (upTime[2]) {
-                    case "Days":
+                switch (upTime[2].toLowerCase()) {
+                    case "days":
                         upTime = parseInt(upTime[1]) * 24;
                         break;
-                    case "Hours":
+                    case "hours":
                         upTime = parseInt(upTime[1]);
                         break;
-                    case "Minutes":
+                    case "minutes":
                         upTime = parseInt(upTime[1]) / 60;
                         break;
-                    case "Seconds":
+                    case "seconds":
                         upTime = parseInt(upTime[1]) / (60 * 60);
                         break;
                     default:
